@@ -1,5 +1,5 @@
 body {
-  background-color: #f7f7f7;
+  background-color: #fff;
   &:before {
     content: '';
     height: 100%;
@@ -10,7 +10,7 @@ body {
 
 :global(#app) {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
   padding: 0 px(100);
   text-align: center;
   width: 99%;

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import { Link } from 'react-router';
+import Navigation from '../Nav'
 import { example, p, link } from './styles';
 import { Button } from 'reactstrap';
 
@@ -19,9 +20,10 @@ export default class Homepage extends Component {
         meta={[
           {
             property: 'og:title',
-            content: 'Golang Isomorphic React/Hot Reloadable/Redux/Css-Modules Starter Kit'
+            content: 'wisdom.fyi - wisdom for your information'
           }
         ]} />
+      <Navigation />
       <h1 className={example}>
         Hot Reloadable <br />
         Golang + React + Redux + Css-Modules
