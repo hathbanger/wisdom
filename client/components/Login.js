@@ -16,25 +16,21 @@ export default class Login extends React.Component {
     return (
     <div>
       <Jumbotron>
-        <h1 className="display-3">Login</h1>
-
-
+        <h1 className="display-4 text-center">Login</h1>
       <Form>
         <FormGroup row>
-          <Label for="exampleEmail" sm={2}>Email</Label>
-          <Col sm={10}>
-            <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+          <Col sm={12}>
+            <Input type="email" name="email" id="exampleEmail" placeholder="Email" />
           </Col>
         </FormGroup>
         <FormGroup row>
-          <Label for="examplePassword" sm={2}>Password</Label>
-          <Col sm={10}>
-            <Input type="password" name="password" id="examplePassword" placeholder="password placeholder" />
+          <Col sm={12}>
+            <Input type="password" name="password" id="examplePassword" placeholder="Password" />
           </Col>
         </FormGroup>
         <FormGroup check row>
-          <Col sm={{ size: 10, offset: 2 }}>
-            <Button>Submit</Button>
+          <Col sm={{ size: 12 }}>
+            <Button block>Login</Button>
           </Col>
         </FormGroup>
       </Form>

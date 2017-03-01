@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, Breadcrumb, BreadcrumbItem } from 'reactstrap';
 
 
 export default class Navigation extends React.Component {
@@ -39,6 +39,12 @@ export default class Navigation extends React.Component {
           </Collapse>
           </div>
         </Navbar>
+      <Breadcrumb tag="nav">
+        <BreadcrumbItem tag="a" href="#">Home</BreadcrumbItem>
+        <BreadcrumbItem tag="a" href="#">Library</BreadcrumbItem>
+        <BreadcrumbItem tag="a" href="#">Data</BreadcrumbItem>
+        <BreadcrumbItem active tag="span">Bootstrap</BreadcrumbItem>
+      </Breadcrumb>            
       </div>
     );
   }

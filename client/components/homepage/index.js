@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import { Link } from 'react-router';
 import Navigation from '../Nav'
+import Sidebar from '../Sidebar'
 import { example, p, link } from './styles';
-import { Container, Row, Col, Breadcrumb, BreadcrumbItem, Card, CardImg, CardText, CardBlock, CardTitle, CardSubtitle, Button, ListGroup, ListGroupItem } from 'reactstrap';
+import { Row, Col, Breadcrumb, BreadcrumbItem, Card, CardImg, CardText, CardBlock, CardTitle, CardSubtitle, Button, ListGroup, ListGroupItem } from 'reactstrap';
 
 export default class Homepage extends Component {
   /*eslint-disable */
@@ -24,19 +25,77 @@ export default class Homepage extends Component {
           }
         ]} />
 
-      <Container>
-      <div>
-      <Breadcrumb tag="nav">
-        <BreadcrumbItem tag="a" href="#">Home</BreadcrumbItem>
-        <BreadcrumbItem tag="a" href="#">Library</BreadcrumbItem>
-        <BreadcrumbItem tag="a" href="#">Data</BreadcrumbItem>
-        <BreadcrumbItem active tag="span">Bootstrap</BreadcrumbItem>
-      </Breadcrumb>    
-      </div>
+ 
+        <hr/>
+<div className="card-columns">
+  <div className="card">
+    <img className="card-img-top img-fluid" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap"/>
+    <div className="card-block">
+      <h4 className="card-title">Card title that wraps to a new line</h4>
+      <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    </div>
+  </div>
+  <div className="card p-3">
+    <blockquote className="card-block card-blockquote">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <footer>
+        <small className="text-muted">
+          Someone famous in <cite title="Source Title">Source Title</cite>
+        </small>
+      </footer>
+    </blockquote>
+  </div>
+  <div className="card">
+    <img className="card-img-top img-fluid" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap"/>
+    <div className="card-block">
+      <h4 className="card-title">Card title</h4>
+      <p className="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div className="card card-inverse card-primary p-3 text-center">
+    <blockquote className="card-blockquote">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
+      <footer>
+        <small>
+          Someone famous in <cite title="Source Title">Source Title</cite>
+        </small>
+      </footer>
+    </blockquote>
+  </div>
+  <div className="card text-center">
+    <div className="card-block">
+      <h4 className="card-title">Card title</h4>
+      <p className="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div className="card">
+    <img className="card-img img-fluid" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image"/>
+  </div>
+  <div className="card p-3 text-right">
+    <blockquote className="card-blockquote">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <footer>
+        <small className="text-muted">
+          Someone famous in <cite title="Source Title">Source Title</cite>
+        </small>
+      </footer>
+    </blockquote>
+  </div>
+  <div className="card">
+    <div className="card-block">
+      <h4 className="card-title">Card title</h4>
+      <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+</div>
+
         <hr/>
         <Row>
           <Col md="8">
-            <h2 className="h2">Change Wordpress user password with Sequel Pro</h2>
+            <h2 className="h2 text-center">Change Wordpress user password with Sequel Pro</h2>
             <small className="text-muted small">Andrew - 3 days ago</small>
             <hr />
             <p className={p}>
@@ -83,32 +142,8 @@ export default class Homepage extends Component {
                 </div>
             </div>            
           </Col>
-          <Col md="4">
-            <Card>
-              <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
-              <CardBlock>
-                <CardTitle className="h3">Card title</CardTitle>
-                <CardSubtitle>Card subtitle</CardSubtitle>
-                <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-                <Button>Button</Button>
-              </CardBlock>
-            </Card>
-            <hr />
-            <ListGroup>
-              <ListGroupItem>Cras justo odCras justo odCras justo odCras justo odCras justo odio</ListGroupItem>
-              <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-              <ListGroupItem>Morbi leo risus</ListGroupItem>
-              <ListGroupItem>Porta ac consectetur ac</ListGroupItem>
-              <ListGroupItem>Vestibulum at eros</ListGroupItem>
-            </ListGroup>            
-          </Col>
-        </Row>
-      <footer className="footer" style={{height: '60px', lineHeight: '60px'}}>
-        <div className="container">
-          <span className="text-muted">Place sticky footer content here.</span>
-        </div>
-      </footer>        
-      </Container>
+          <Sidebar />
+        </Row>    
     </div>;
   }
 

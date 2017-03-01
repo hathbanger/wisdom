@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import Navigation from '../Nav';
+import Footer from '../Footer';
+import { Container } from 'reactstrap';
 
 export default class App extends Component {
 
@@ -8,7 +10,10 @@ export default class App extends Component {
     return <div>
       <Helmet title='Go + React + Redux = rocks!' />
       <Navigation />
-      {this.props.children}
+      <Container>
+      	{this.props.children}
+      </Container>
+      <Footer />
     </div>;
   }
 
