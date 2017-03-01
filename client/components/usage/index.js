@@ -31,6 +31,7 @@ class Usage extends Component {
       </div>
       <br />
       go <IndexLink to='/' className={link}>home</IndexLink>
+      {this.props.children}
     </div>;
   }
 
